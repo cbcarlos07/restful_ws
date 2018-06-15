@@ -41,11 +41,11 @@ const categories = deps => {
       return new Promise((resolve, reject) => {
         const { connection, errorHandler } = deps
         connection.query('DELETE FROM categories WHERE id = ?', [id], (error, results) => {
-          if (error) {
+          if (error || !results.affectedRows) {
             errorHandler(error, `Falha ao remover a categoria de id ${id}`, reject)
             return false
           }
-          resolve({message: 'Categoria removida com sucesso'})
+          resolve({message: 'Categoria removida com sucesso', affectedRows: results.affectedRows})
         })
       })
     }
