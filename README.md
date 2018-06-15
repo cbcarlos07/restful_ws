@@ -24,4 +24,10 @@ Aula ministrada por [Fábio Vedovelli](https://www.youtube.com/channel/UC1PUtdA_
    > const sha1 = require('sha1')
 
    
+* >npm i --save-dev jsonwebtoken
+
+Retornar um token para login e senha
+
+Usa-se assim:
+> const jwt = require('jsonwebtoken')
 

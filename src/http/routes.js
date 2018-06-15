@@ -17,6 +17,25 @@ const routes = (server) => {
       next()
     }) */
   })
+  server.post('/autenticacao', async (req, res, next) => {
+    try {
+      const {email, password} = req.params
+      res.send(await db.auth().authenticate(email, password))
+      next()
+    } catch (error) {
+      res.send(error)
+    }
+    next()
+
+    /* db.categories().all().then(categories => {
+      res.send(categories)
+      next()
+    }).catch(error => {
+      res.send(error)
+      next()
+    }) */
+  })
+
   server.post('/categoria', async (req, res, next) => {
     const { name } = req.params
     try {
@@ -27,6 +46,8 @@ const routes = (server) => {
     }
     next()
   })
+  
+
   server.put('/categoria', async (req, res, next) => {
     {
       const { id, name } = req.params
