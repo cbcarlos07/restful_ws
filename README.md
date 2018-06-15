@@ -31,3 +31,5 @@ Retornar um token para login e senha
 Usa-se assim:
 > const jwt = require('jsonwebtoken')
 
+>  const token = jwt.sign({email, id}, 'macarrão', { expiresIn: 60 * 60 * 24 })
+
