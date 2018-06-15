@@ -40,6 +40,14 @@ Alterar na linha
   Para
   
      "dev": "nodemon src/index.js" 
+
+* > nodemon src/index.js
+
+Para ficar rodando e mostrar alterção sempre que salvar ou qualquer momento rodar o comanso rs e dar enter
+
+* > rs
+
+Reinicar o nodemon
     
 * > npm i
   
