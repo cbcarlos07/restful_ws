@@ -46,7 +46,6 @@ const routes = (server) => {
     }
     next()
   })
-  
 
   server.put('/categoria', async (req, res, next) => {
     {
