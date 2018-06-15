@@ -15,4 +15,13 @@ Aula ministrada por [Fábio Vedovelli](https://www.youtube.com/channel/UC1PUtdA_
  * >npm test -- --watch 
  
  Serve para ficar rodando testes em tempo real
+ 
+ * >npm i --save-dev sha1
+ 
+ Serve para instalar a criptografia sha1
+ 
+ Usa-se assim:
+   > const sha1 = require('sha1')
+
+   
 
